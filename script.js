@@ -1,4 +1,3 @@
-//your code here
 document.addEventListener('DOMContentLoaded', function () {
   // Get clock hands elements
   const hourHand = document.querySelector('.hour-hand');
