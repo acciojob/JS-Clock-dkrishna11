@@ -1,1 +1,66 @@
 /* Your CSS Code here. */
+.analogClock{
+    border-radius: 50%;
+    background-color: #11052B;
+    height: 20em;
+    width: 20em;
+    position: relative;
+}
+
+.second-container, .minutes-container, .hours-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hours{
+    background-color: #E83063;
+    height: 20%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform-origin: 50% 100%;
+    width: 2.5%;
+    border-radius: 50px;
+}
+
+.minutes{
+    background-color: #6CE4FF;
+    height: 30%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform-origin: 50% 100%;
+    width: 2%;
+    border-radius: 50px;
+}
+
+.seconds{
+    background-color: #59FF8C;
+    height: 40%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform-origin: 50% 100%;
+    width: 1%;
+    z-index: 8;
+    border-radius: 50px;
+}
+
+.hours-container{
+    animation: rotate 43200s infinite steps(12);
+}
+
+.minutes-container{
+    animation: rotate 3600s infinite steps(60);
+}
+
+.second-container{
+    animation: rotate 60s infinite steps(60);
+}
+
+@keyframes rotate {
+    100% { transform: rotateZ(360deg); }
+}
